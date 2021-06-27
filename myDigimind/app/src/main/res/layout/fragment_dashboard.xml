@@ -1,22 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="50dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logobrain"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dusty_rose"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:text="@string/reminder_name"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/whatToDo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex. cook the diner"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dusty_rose"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:text="@string/when"
+                android:layout_marginTop="20dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0">
+
+    <TableRow
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="54dp"
+        >
+
+        <TextView
+            android:text="@string/m"
+            android:textSize="25sp" />
+        <CheckBox
+            android:id="@+id/lunesCheck"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/tu"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/martescheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/w"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/miercheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/thu"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/juevesscheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/f"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/viernescheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/sa"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/sabadocheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="54dp">
+
+                    <TextView
+                        android:text="@string/s"
+                        android:textSize="25sp" />
+                    <CheckBox
+                        android:id="@+id/domingocheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dusty_rose"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:text="At what time?"
+                android:layout_marginTop="1dp"/>
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp" />
+
+            <Button
+                android:id="@+id/btndone"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dusty_rose"
+                android:paddingHorizontal="50dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Done" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
