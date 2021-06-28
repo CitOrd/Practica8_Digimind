@@ -176,6 +176,18 @@
                 android:layout_marginTop="1dp" />
 
             <Button
+                android:id="@+id/btn_tiempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Set time"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:textAllCaps="false"
+                android:background="?android:attr/selectableItemBackground"/>
+
+            <Button
                 android:id="@+id/btndone"
                 android:layout_marginTop="1dp"
                 android:layout_width="wrap_content"
