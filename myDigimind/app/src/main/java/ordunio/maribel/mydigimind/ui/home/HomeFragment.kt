@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.GridView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -17,9 +18,11 @@ import ordunio.maribel.mydigimind.ui.Task
 
 class HomeFragment : Fragment() {
 
+
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
     var tasks = ArrayList<Task>()
+    private var adaptador: AdapterTask? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -34,7 +37,12 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        filltask()
+        adaptador = AdapterTask(root.context, tasks)
 
+        val gridView : GridView = root.findViewById(R.id.reminders)
+
+        gridView.adapter = adaptador
 
 
         return root
@@ -83,7 +91,15 @@ class HomeFragment : Fragment() {
             var inflator = LayoutInflater.from(context)
             var vista = inflator.inflate(R.layout.task_view, null)
 
-            var tv_title = vista.findViewById(R.id.)
+            var tv_title: TextView = vista.findViewById(R.id.tv_title)
+            var tv_days: TextView = vista.findViewById(R.id.tv_days)
+            var tv_time: TextView= vista.findViewById(R.id.btn_tiempo)
+
+            tv_title.setText(task.title)
+            tv_days.setText(task.days.toString())
+            tv_time.setText(task.time)
+
+            return vista
         }
 
 

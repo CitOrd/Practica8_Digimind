@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
+    android:paddingBottom="56dp"
+    android:paddingTop="20dp"
+    android:paddingHorizontal="20dp"
     android:orientation="vertical">
 
     <ImageView
@@ -20,6 +23,7 @@
         android:numColumns="3"
         android:layout_marginTop="15dp"
         android:id="@+id/reminders"
+
         />
 
 

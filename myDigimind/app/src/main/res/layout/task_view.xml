@@ -11,7 +11,8 @@
          android:layout_height="match_parent"
          android:paddingVertical="20dp"
          android:background="@drawable/fondo"
-         >
+         android:orientation="vertical">
+
 
          <TextView
              android:layout_width="match_parent"
@@ -24,15 +25,23 @@
              />
 
          <TextView
+             android:id="@+id/tv_days"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:id="@+id/tv_days"
+             android:layout_gravity="center"
              android:text="EveryDay"
-             android:textSize="15dp"
              android:textAlignment="center"
              android:textColor="@color/navy_blue"
-             />
+             android:textSize="15dp" />
 
+         <TextView
+             android:layout_width="match_parent"
+             android:id="@+id/tv_time"
+             android:textSize="14sp"
+             android:textColor="@color/navy_blue"
+             android:gravity="center"
+             android:layout_height="wrap_content"
+             android:text="Practica"/>
 
      </LinearLayout>
 
